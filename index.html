@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VerilogFlow - Logic Gate Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #0f172a;
+        color: #f8fafc;
+      }
+      .gate-symbol {
+        stroke: currentColor;
+        stroke-width: 2.5;
+        fill: rgba(56, 189, 248, 0.1); /* Sky-400 with 10% opacity for a subtle glow */
+        transition: fill 0.2s ease, stroke 0.2s ease;
+      }
+      .port {
+        cursor: crosshair;
+      }
+      .port:hover {
+        transform: scale(1.5);
+        transform-origin: center;
+      }
+      .wire {
+        fill: none;
+        stroke: #38bdf8;
+        stroke-width: 3;
+        stroke-linecap: round;
+        filter: drop-shadow(0 0 4px #0ea5e9);
+        pointer-events: none;
+      }
+      .canvas-grid {
+        background-image: radial-gradient(#334155 1px, transparent 1px);
+        background-size: 30px 30px;
+      }
+      .no-select {
+        user-select: none;
+      }
+      circle.port {
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

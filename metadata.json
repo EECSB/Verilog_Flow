@@ -1,0 +1,7 @@
+{
+  "name": "VerilogFlow: Logic Gate Designer",
+  "description": "A visual logic circuit designer that allows users to drag-and-drop gates, connect them, and export the resulting design as SystemVerilog code.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
